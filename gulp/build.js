@@ -298,6 +298,17 @@ module.exports = function (gulp, $, config) {
       }))
       .pipe(gulp.dest(config.buildDir));
   });
+
+  // Vulcanize polymer html files
+  gulp.task('vulcanize', ['htmlimport'],function() {
+    return gulp.src(config.buildDir + 'elements.html')
+      .pipe($.vulcanize({
+        stripComments: true,
+        inlineCss: true,
+        inlineScripts: true
+      }))
+    .pipe(gulp.dest(config.buildDir));
+  });
   
   // copy Bower fonts and images into build directory
   gulp.task('bowerAssets', ['clean'], function () {
@@ -330,7 +341,7 @@ module.exports = function (gulp, $, config) {
       .pipe(gulp.dest(config.buildImages));
   });
 
-  gulp.task('copyTemplates', ['htmlimport'], function () {
+  gulp.task('copyTemplates', ['vulcanize'], function () {
     // always copy templates to testBuild directory
     var stream = $.streamqueue({objectMode: true});
 

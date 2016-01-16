@@ -4,7 +4,9 @@
   "scripts": {
     "test": "gulp test"
   },
-  "dependencies": {},
+  "dependencies": {
+    "gulp-vulcanize": "^6.1.0"
+  },
   "devDependencies": {
     "browser-sync": "^2.2.3",
     "del": "^2.0.0",
