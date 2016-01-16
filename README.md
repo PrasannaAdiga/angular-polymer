@@ -1,8 +1,8 @@
-# App
+# Angular-Polymer
 
-A basic starter application to use both angular(1.4) and polymer(1.0) together 
-*Generated with [ng-poly](https://github.com/dustinspecker/generator-ng-poly/tree/v0.11.4) version 0.11.4*
-Added extra feature along with the generator-ng-poly:
+A basic starter application to use both angular(1.4) and polymer(1.0) together.
+Generated with [ng-poly](https://github.com/dustinspecker/generator-ng-poly/tree/v0.11.4) version 0.11.4.
+Added extra features along with the generator-ng-poly:
 - Many polymer's built in html elements support
 - Vulcanize support to concatenate a set of polymer's Components into one file 
 
@@ -23,16 +23,16 @@ Added extra feature along with the generator-ng-poly:
 - Run `gulp e2eTest` to run e2e tests via Protractor
  - **A localhost must be running** - `gulp dev`
  
- ## Following polymer elements are added using bower
- - bower install --save PolymerElements/paper-header-panel
- - bower install --save PolymerElements/paper-toolbar
- - bower install --save PolymerElements/paper-menu
- - bower install --save PolymerElements/paper-item
- - bower install --save PolymerElements/paper-drawer-panel
- - bower install --save PolymerElements/paper-icon-button
- - bower install --save PolymerElements/paper-tabs
- - bower install --save PolymerElements/iron-icons
- - bower install --save PolymerElements/iron-flex-layout
+## Following polymer elements are added using bower
+- bower install --save PolymerElements/paper-header-panel
+- bower install --save PolymerElements/paper-toolbar
+- bower install --save PolymerElements/paper-menu
+- bower install --save PolymerElements/paper-item
+- bower install --save PolymerElements/paper-drawer-panel
+- bower install --save PolymerElements/paper-icon-button
+- bower install --save PolymerElements/paper-tabs
+- bower install --save PolymerElements/iron-icons
+- bower install --save PolymerElements/iron-flex-layout
  
- ## Vulcanize support for the polymer(Reduce an HTML file and its dependent HTML Imports into one file)
- - npm install --save gulp-vulcanize
+## Vulcanize support for the polymer
+- npm install --save gulp-vulcanize
