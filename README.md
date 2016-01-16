@@ -18,3 +18,16 @@
 - Run `gulp webdriverUpdate` to download Selenium server standalone and Chrome driver for e2e testing
 - Run `gulp e2eTest` to run e2e tests via Protractor
  - **A localhost must be running** - `gulp dev`
+ 
+ ## Following polymer elements are used
+ - bower install --save PolymerElements/paper-header-panel
+ - bower install --save PolymerElements/paper-toolbar
+ - bower install --save PolymerElements/paper-menu
+ - bower install --save PolymerElements/paper-item
+ - bower install --save PolymerElements/paper-drawer-panel
+ - bower install --save PolymerElements/paper-icon-button
+ - bower install --save PolymerElements/paper-tabs
+ - bower install --save PolymerElements/iron-icons
+ - bower install --save PolymerElements/iron-flex-layout
+ 
+ 

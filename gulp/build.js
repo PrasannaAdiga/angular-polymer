@@ -216,7 +216,22 @@ module.exports = function (gulp, $, config) {
     // directory. The Bower directory is automatically prepended via the
     // map function.
     polymerBowerAssetsToCopy = [
-      'polymer/polymer*.html'
+      'polymer/polymer*.html',
+      'paper-drawer-panel/paper-drawer-panel.html',
+      'paper-header-panel/paper-header-panel.html',
+      'paper-toolbar/paper-toolbar.html',
+      'paper-menu/paper-menu.html',
+      'paper-menu/paper-submenu.html',    
+      'paper-item/paper-item.html', 
+      'paper-icon-button/paper-icon-button.html',
+      'iron-icons/iron-icons.html',
+      'iron-flex-layout/classess/iron-flex-layout.html',
+      'iron-menu-behaviour/iron-menu-behaviour.html',
+      'iron-flex-layout/classes/*.html',
+      'paper-styles/{color.html,default-theme.html,paper-styles.html,shadow.html,typography.html}',
+      'paper-tabs/paper-tabs.html',
+      'paper-tabs/paper-tab.html',
+      '**/**.html'
     ].map(function (file) {
       return bowerDir + file;
     });
@@ -238,7 +253,19 @@ module.exports = function (gulp, $, config) {
     // components directory is automatically prepended via the
     // map function.
     var polymerAssetsToInject = [
-      'polymer/polymer.html'
+      'polymer/polymer.html',
+      'paper-drawer-panel/paper-drawer-panel.html',
+      'paper-header-panel/paper-header-panel.html',
+      'paper-toolbar/paper-toolbar.html',
+      'paper-menu/paper-menu.html',
+      'paper-menu/paper-submenu.html',    
+      'paper-item/paper-item.html',    
+      'paper-icon-button/paper-icon-button.html',
+      'iron-icons/iron-icons.html'  ,
+      'iron-flex-layout/classes/iron-flex-layout.html',
+      'iron-menu-behaviour/iron-menu-behaviour.html',
+      'paper-tabs/paper-tabs.html',
+      'paper-tabs/paper-tab.html'
     ].map(function (file) {
       return config.buildComponents + file;
     });
