@@ -270,7 +270,7 @@ module.exports = function (gulp, $, config) {
       return config.buildComponents + file;
     });
 
-    return gulp.src(config.buildDir + 'index.html')
+    return gulp.src(config.buildDir + 'elements.html')
       .pipe($.inject(gulp.src(polymerAssetsToInject), {
           starttag: '<!-- inject:html -->',
           endtag: '<!-- endinject -->',
@@ -281,6 +281,24 @@ module.exports = function (gulp, $, config) {
       .pipe(gulp.dest(config.buildDir));
   });
 
+  // import element.html file into index.html file
+  gulp.task('htmlimport', ['componentsInject'],function() {
+    var htmlFileToImport = [
+      'elements.html'
+    ].map(function (file) {
+      return config.buildDir + file;
+    });
+    
+    return gulp.src(config.buildDir + 'index.html')
+      .pipe($.inject(gulp.src(htmlFileToImport), {
+        starttag: '<!-- inject:html -->',
+        endtag: '<!-- endinject -->',
+        addRootSlash: false,
+        ignorePath: config.buildDir
+      }))
+      .pipe(gulp.dest(config.buildDir));
+  });
+  
   // copy Bower fonts and images into build directory
   gulp.task('bowerAssets', ['clean'], function () {
     var assetFilter = $.filter('**/*.{eot,otf,svg,ttf,woff,woff2,gif,jpg,jpeg,png}', {restore: true});
@@ -312,7 +330,7 @@ module.exports = function (gulp, $, config) {
       .pipe(gulp.dest(config.buildImages));
   });
 
-  gulp.task('copyTemplates', ['componentsInject'], function () {
+  gulp.task('copyTemplates', ['htmlimport'], function () {
     // always copy templates to testBuild directory
     var stream = $.streamqueue({objectMode: true});
 
