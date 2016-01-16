@@ -12,12 +12,16 @@
     <!-- inject:css -->
     <!-- endinject -->
   </head>
-  <body>
-
-    <div data-ui-view>
-
-    </div>
-
+  <body class="fullbleed vertical layout">
+    <paper-drawer-panel left-drawer>
+      <paper-scroll-header-panel drawer>
+        <div ui-view="sidebar"></div>
+      </paper-scroll-header-panel>      
+      <paper-scroll-header-panel main>
+        <div ui-view="header"></div> 
+        <div ui-view></div>      
+      </paper-scroll-header-panel>      
+    </paper-drawer-panel>
     <!-- bower:js -->
     <!-- endbower -->
     <!-- inject:js -->
