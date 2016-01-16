@@ -309,6 +309,11 @@ module.exports = function (gulp, $, config) {
       }))
     .pipe(gulp.dest(config.buildDir));
   });
+    
+  // Delete the commponents folder from build
+  gulp.task('deleteComponent', ['vulcanize'],function() {
+    return $.del(config.buildComponents);
+  });   
   
   // copy Bower fonts and images into build directory
   gulp.task('bowerAssets', ['clean'], function () {
@@ -341,7 +346,7 @@ module.exports = function (gulp, $, config) {
       .pipe(gulp.dest(config.buildImages));
   });
 
-  gulp.task('copyTemplates', ['vulcanize'], function () {
+  gulp.task('copyTemplates', ['deleteComponent'], function () {
     // always copy templates to testBuild directory
     var stream = $.streamqueue({objectMode: true});
 
