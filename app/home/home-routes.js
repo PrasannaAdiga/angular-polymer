@@ -9,9 +9,14 @@
     $stateProvider
       .state('home', {
         url: '/home',
-        templateUrl: 'home/views/home.tpl.html',
-        controller: 'HomeCtrl',
-        controllerAs: 'home'
+        parent: 'sidebar',
+        views: {
+          '@': {
+            templateUrl: 'home/views/home.tpl.html',
+            controller: 'HomeCtrl',
+            controllerAs: 'home'
+          }
+        }
       });
   }
 }());
