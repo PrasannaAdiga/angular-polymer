@@ -1,6 +1,10 @@
 # App
 
+A basic starter application to use both angular(1.4) and polymer(1.0) together 
 *Generated with [ng-poly](https://github.com/dustinspecker/generator-ng-poly/tree/v0.11.4) version 0.11.4*
+Added extra feature along with the generator-ng-poly:
+- Many polymer's built in html elements support
+- Vulcanize support to concatenate a set of polymer's Components into one file 
 
 ## Setup
 1. Install [Node.js](http://nodejs.org/)
