@@ -180,7 +180,7 @@ module.exports = function (gulp, $, config) {
         }))
         .pipe($.htmlmin({
           collapseWhitespace: true,
-          removeComments: true
+          //removeComments: true
         }))
         .pipe(gulp.dest(config.buildDir));
     } else {
@@ -291,8 +291,6 @@ module.exports = function (gulp, $, config) {
     
     return gulp.src(config.buildDir + 'index.html')
       .pipe($.inject(gulp.src(htmlFileToImport), {
-        starttag: '<!-- inject:html -->',
-        endtag: '<!-- endinject -->',
         addRootSlash: false,
         ignorePath: config.buildDir
       }))
@@ -374,7 +372,8 @@ module.exports = function (gulp, $, config) {
           '!' + config.buildImages,
           '!' + config.buildJs,
           '!' + config.extDir,
-          '!' + config.buildDir + 'index.html'
+          '!' + config.buildDir + 'index.html',
+          '!' + config.buildDir + 'elements.html'
         ], {mark: true})
           .then(function () {
             cb();
