@@ -2,15 +2,12 @@
   'use strict';
 
   /* @ngdoc object
-   * @name app
+   * @name sidebar
    * @description
    *
    */
   angular
-    .module('app', [
-      'ui.router',
-      'home',
-      'header',
-      'sidebar'
+    .module('sidebar', [
+      'ui.router'
     ]);
 }());
