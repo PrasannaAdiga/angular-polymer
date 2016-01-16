@@ -1,5 +1,7 @@
 # Angular-Polymer
 
+![Alt text](/Angular-Polymer.png?raw=true "Angular-Polymer")
+
 A basic starter application to use both angular(1.4) and polymer(1.0) together.
 Generated with [ng-poly](https://github.com/dustinspecker/generator-ng-poly/tree/v0.11.4) version 0.11.4.
 Added extra features along with the generator-ng-poly:
